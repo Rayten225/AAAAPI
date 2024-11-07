@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}форма по добалению статьи{% endblock %}
+
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.anons }}<br>
+        {{ form.full_text }}<br>
+        {{ form.date }}<br>
+        {{ error }}
+        <button type="submit">Добавить статью</button>
+    </form>
+{% endblock %}.html' %}
